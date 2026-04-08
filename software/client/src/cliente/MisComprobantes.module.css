@@ -1,0 +1,166 @@
+.container {
+    padding: 10px;
+    animation: slideUp 0.4s ease-out;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.titleSection h2 {
+    color: #1e293b;
+    font-size: 1.6rem;
+    margin-bottom: 4px;
+}
+
+.titleSection p {
+    color: #64748b;
+    font-size: 0.95rem;
+}
+
+/* Selector de Periodo */
+.filterSection {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-width: 220px;
+}
+
+.label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.selectWrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.select {
+    width: 100%;
+    padding: 12px 16px;
+    background: white;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #1e293b;
+    cursor: pointer;
+    appearance: none;
+    transition: border-color 0.2s;
+}
+
+.select:focus {
+    outline: none;
+    border-color: #2563eb;
+}
+
+.arrow {
+    position: absolute;
+    right: 15px;
+    pointer-events: none;
+    color: #94a3b8;
+}
+
+/* Tabla */
+.tableWrapper {
+    background: white;
+    border-radius: 16px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table th {
+    background: #f8fafc;
+    padding: 16px;
+    text-align: left;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #64748b;
+    text-transform: uppercase;
+    border-bottom: 2px solid #f1f5f9;
+}
+
+.table td {
+    padding: 16px;
+    border-bottom: 1px solid #f1f5f9;
+    font-size: 0.9rem;
+    color: #334155;
+}
+
+.textRight { text-align: right; }
+.textCenter { text-align: center; }
+
+.docNum {
+    font-weight: 700;
+    color: #2563eb;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.totalText {
+    font-weight: 800;
+    color: #0f172a;
+}
+
+/* Badges de Estado */
+.badge {
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    background: #f1f5f9;
+    color: #64748b;
+}
+
+.aceptado { background: #dcfce7; color: #166534; }
+.reemplazado { background: #fef9c3; color: #854d0e; }
+.pendiente { background: #f1f5f9; color: #64748b; }
+
+/* Estados de Carga y Vacío */
+.loaderContainer {
+    text-align: center;
+    padding: 80px 0;
+    color: #2563eb;
+}
+
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #2563eb;
+    border-radius: 50%;
+    margin: 0 auto 15px;
+    animation: spin 1s linear infinite;
+}
+
+.emptyState {
+    text-align: center;
+    padding: 60px;
+    color: #94a3b8;
+    font-style: italic;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}

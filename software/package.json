@@ -1,0 +1,7 @@
+{
+  "name": "ContableDev",
+  "version": "1.0.0",
+  "description": "Software contable",
+  "main": "app.js",
+  "license": "MIT"
+}

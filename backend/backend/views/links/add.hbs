@@ -1,0 +1,24 @@
+<div class='container p-4'>
+    <div class='form'>
+        <div class='col-md-4 mx-auto'>
+            <div class='card'>
+                <div class='card-body'>
+                    <form action='/links/add' method='POST'>
+                        <div class='form-group mb-3'>
+                           <input tyle='text' class='form-control' name='title' placeholder='Título' autofocus></input>
+                        </div>
+                        <div class='form-group mb-3'>
+                            <input type='url' name='url' class='form-control' placeholder='URL'></input>
+                        </div>
+                        <div class='form-group mb-3'>
+                            <textarea type='text' name='description' placeholder='Descripción' rows='2' class='form-control'></textarea>
+                        </div>
+                        <div class='form-group mb-3'>
+                            <button class="btn btn-success btn-block">Guardar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

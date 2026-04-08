@@ -1,0 +1,159 @@
+.container { padding: 2rem; background: #fff; border-radius: 12px; }
+
+.header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; }
+
+.importBtn { background: #0f172a; color: white; padding: 10px 20px; border-radius: 8px; border: none; cursor: pointer; }
+.acceptBtn { background: #10b981; color: white; padding: 10px 20px; border-radius: 8px; border: none; cursor: pointer; margin-left: 10px; }
+
+.tableWrapper { overflow-x: auto; border: 1px solid #e2e8f0; border-radius: 12px; }
+
+.table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+.table th { background: #f8fafc; padding: 15px; text-align: left; color: #64748b; }
+.table td { padding: 15px; border-bottom: 1px solid #f1f5f9; }
+
+.missingRow { background-color: #fff1f2; color: #be123c; } /* Fondo rojo suave para errores */
+
+.missingRow td:last-child { font-weight: bold; }
+
+.selectorContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-width: 280px;
+}
+
+.label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #64748b; /* Azul grisáceo suave */
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.selectWrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: #ffffff;
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    padding: 0 12px;
+}
+
+/* Efecto cuando el usuario pasa el mouse o hace foco */
+.selectWrapper:hover {
+    border-color: #cbd5e1;
+}
+
+.selectWrapper.active {
+    border-color: #3b82f6; /* Azul primario */
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1);
+}
+
+.icon {
+    font-size: 1.1rem;
+    margin-right: 10px;
+}
+
+.selectPeriodo {
+    width: 100%;
+    padding: 12px 30px 12px 0;
+    border: none;
+    background: transparent;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #1e293b;
+    appearance: none; /* Quitamos la flecha nativa */
+    cursor: pointer;
+    outline: none;
+}
+
+.arrow {
+    position: absolute;
+    right: 15px;
+    color: #94a3b8;
+    pointer-events: none;
+    font-size: 1.2rem;
+}
+
+/* Estilo para las opciones dentro del select */
+.selectPeriodo option {
+    background-color: #ffffff;
+    color: #1e293b;
+    padding: 10px;
+}
+
+/* Overlay que cubre toda la pantalla */
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    backdrop-filter: blur(4px);
+}
+
+/* Caja del modal */
+.modalContent {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    width: 400px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    animation: fadeIn 0.3s ease;
+}
+
+.modalIconWarning { font-size: 3rem; margin-bottom: 15px; }
+.modalIconSuccess { font-size: 3rem; margin-bottom: 15px; color: #10b981; }
+
+.modalContent h3 {
+    margin-bottom: 10px;
+    color: #1e293b;
+    font-size: 1.4rem;
+}
+
+.modalContent p {
+    color: #64748b;
+    margin-bottom: 25px;
+    line-height: 1.5;
+}
+
+.modalActions {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+}
+
+.cancelBtn {
+    padding: 10px 20px;
+    border: 1px solid #e2e8f0;
+    background: white;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.confirmBtn {
+    padding: 10px 25px;
+    background: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.2s;
+}
+
+.confirmBtn:hover { background: #2563eb; }
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}

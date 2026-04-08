@@ -1,0 +1,178 @@
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -320px; /* Un poco más ancho para mejor legibilidad */
+    width: 300px;
+    height: 100vh;
+    background: #ffffff;
+    z-index: 1100;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    flex-direction: column;
+    box-shadow: 15px 0 35px rgba(0, 0, 0, 0.05);
+}
+
+.sidebar.open {
+    transform: translateX(320px);
+}
+
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.4);
+    backdrop-filter: blur(4px);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s ease;
+    z-index: 1050;
+}
+
+.overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Header del Sidebar */
+.sidebarHeader {
+    padding: 2rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.brandBadge {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.brandIcon {
+    width: 38px;
+    height: 38px;
+    background: #10b981;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    font-weight: 800;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 10px rgba(16, 185, 129, 0.2);
+}
+
+.brandText {
+    display: flex;
+    flex-direction: column;
+}
+
+.brandTitle {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #0f172a;
+}
+
+.brandStatus {
+    font-size: 0.7rem;
+    color: #10b981;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.closeBtn {
+    background: #f8fafc;
+    border: none;
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    color: #94a3b8;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.closeBtn:hover {
+    background: #f1f5f9;
+    color: #0f172a;
+}
+
+/* Navegación */
+.nav {
+    padding: 1.5rem 1rem;
+    flex: 1;
+    overflow-y: auto;
+}
+
+.menuSectionTitle {
+    padding: 0 1rem 0.75rem;
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.navLink {
+    display: flex;
+    align-items: center;
+    padding: 0.85rem 1rem;
+    color: #475569;
+    text-decoration: none;
+    border-radius: 12px;
+    margin-bottom: 0.4rem;
+    transition: all 0.2s ease;
+    font-weight: 500;
+    position: relative;
+}
+
+.navLink:hover {
+    background: #f0fdf4;
+    color: #059669;
+    transform: translateX(4px);
+}
+
+.activeLink {
+    background: #ecfdf5;
+    color: #059669;
+    font-weight: 700;
+}
+
+.iconWrapper {
+    margin-right: 12px;
+    font-size: 1.25rem;
+    display: flex;
+    align-items: center;
+}
+
+.activeIndicator {
+    position: absolute;
+    right: 12px;
+    width: 6px;
+    height: 6px;
+    background: #10b981;
+    border-radius: 50%;
+    box-shadow: 0 0 8px rgba(16, 185, 129, 0.6);
+}
+
+/* Footer */
+.sidebarFooter {
+    padding: 1.5rem;
+    border-top: 1px solid #f1f5f9;
+    background: #f8fafc;
+}
+
+.footerInfo {
+    text-align: center;
+}
+
+.version {
+    font-size: 0.7rem;
+    color: #94a3b8;
+    margin: 0;
+}
+
+.agency {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #64748b;
+    margin: 2px 0 0;
+}

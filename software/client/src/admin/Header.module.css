@@ -1,0 +1,147 @@
+.header {
+    height: 75px;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.leftSection, .rightSection {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+/* Burger Button Animado */
+.burgerBtn {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    transition: all 0.2s ease;
+}
+
+.burgerBtn:hover {
+    background: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transform: translateY(-1px);
+}
+
+.burgerLine {
+    width: 22px;
+    height: 2px;
+    background: #1e3a8a;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+/* Brand Section */
+.logoSquare {
+    background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+    color: white;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    font-weight: 800;
+    font-size: 0.9rem;
+    box-shadow: 0 4px 10px rgba(30, 58, 138, 0.25);
+}
+
+.brand { display: flex; align-items: center; gap: 1rem; }
+.mainTitle { font-size: 1.2rem; margin: 0; color: #0f172a; font-weight: 800; letter-spacing: -0.5px; }
+
+.statusIndicator { display: flex; align-items: center; gap: 6px; }
+.dot { width: 6px; height: 6px; background: #10b981; border-radius: 50%; box-shadow: 0 0 8px #10b981; }
+.subTitle { font-size: 0.75rem; color: #64748b; font-weight: 500; }
+
+/* Company Badge (Multi-tenant info) */
+.companyBadge {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    background: #f1f5f9;
+    padding: 6px 14px;
+    border-radius: 10px;
+    border: 1px solid #e2e8f0;
+}
+
+.rucText { font-size: 0.65rem; font-weight: 700; color: #3b82f6; }
+.companyName { font-size: 0.8rem; font-weight: 600; color: #475569; max-width: 200px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+.divider { width: 1px; height: 35px; background: #e2e8f0; }
+
+/* User Profile */
+.userProfile { display: flex; align-items: center; gap: 1rem; }
+.userMeta { text-align: right; }
+.userName { display: block; font-size: 0.9rem; font-weight: 700; color: #1e293b; }
+.userRole { font-size: 0.75rem; font-weight: 600; color: #3b82f6; text-transform: uppercase; }
+
+.avatarWrapper { position: relative; }
+.userAvatar {
+    width: 44px;
+    height: 44px;
+    background: #ffffff;
+    color: #1e3a8a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 14px;
+    font-weight: 700;
+    border: 2px solid #e2e8f0;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.04);
+}
+
+.onlineBadge {
+    position: absolute;
+    bottom: -2px;
+    right: -2px;
+    width: 14px;
+    height: 14px;
+    background: #10b981;
+    border: 3px solid #ffffff;
+    border-radius: 50%;
+}
+
+/* Logout Button */
+.logoutBtn {
+    background: #ffffff;
+    color: #64748b;
+    border: 1px solid #e2e8f0;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+}
+
+.logoutBtn:hover {
+    background: #fef2f2;
+    color: #ef4444;
+    border-color: #fee2e2;
+    transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .companyBadge, .divider { display: none; }
+}
+
+@media (max-width: 600px) {
+    .userMeta { display: none; }
+    .header { padding: 0 1rem; }
+}

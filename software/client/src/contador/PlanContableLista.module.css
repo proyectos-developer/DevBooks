@@ -1,0 +1,118 @@
+.container {
+    padding: 2rem;
+    animation: fadeIn 0.4s ease;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.titleGroup h2 { color: #1e293b; margin: 0; font-weight: 800; }
+.titleGroup p { color: #64748b; margin: 5px 0 0; font-size: 0.9rem; }
+
+.searchBar {
+    padding: 0.8rem 1.5rem;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    width: 350px;
+    font-size: 0.95rem;
+    transition: 0.2s;
+}
+
+.searchBar:focus {
+    outline: none;
+    border-color: #10b981;
+    box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.1);
+}
+
+.tableCard {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    border: 1px solid #f1f5f9;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table th {
+    background: #f8fafc;
+    padding: 1rem;
+    text-align: left;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    color: #475569;
+    border-bottom: 2px solid #f1f5f9;
+}
+
+.table td {
+    padding: 1rem;
+    border-bottom: 1px solid #f8fafc;
+    font-size: 0.95rem;
+    color: #334155;
+}
+
+.rowPrincipal {
+    background-color: #f0fdf4; /* Resaltar cuentas de nivel 1 */
+    font-weight: 700;
+}
+
+.codeCell {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 700;
+    color: #059669;
+}
+
+.levelBadge {
+    background: #f1f5f9;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.activeTag { color: #10b981; font-size: 0.8rem; font-weight: 700; }
+.parentTag { color: #94a3b8; font-size: 0.8rem; }
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.loaderContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5rem;
+    background: white;
+    border-radius: 20px;
+    border: 1px solid #e2e8f0;
+}
+
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #10b981; /* Verde esmeralda */
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 1rem;
+}
+
+.noData {
+    padding: 3rem;
+    text-align: center;
+    color: #64748b;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

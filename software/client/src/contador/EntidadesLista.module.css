@@ -1,0 +1,71 @@
+.container { padding: 2rem; animation: fadeIn 0.4s ease; }
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 2.5rem;
+}
+
+.titleGroup h2 { color: #1e293b; margin: 0; font-weight: 800; font-size: 1.8rem; }
+.titleGroup p { color: #94a3b8; margin: 5px 0 0; }
+
+.actions { display: flex; gap: 15px; }
+
+.search {
+    padding: 0.7rem 1.2rem;
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+    width: 280px;
+}
+
+.addBtn {
+    background: #10b981;
+    color: white;
+    border: none;
+    padding: 0.7rem 1.5rem;
+    border-radius: 10px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+/* Grid de Tarjetas */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.card {
+    background: white;
+    border-radius: 16px;
+    padding: 1.5rem;
+    border: 1px solid #f1f5f9;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s;
+}
+
+.card:hover { transform: translateY(-5px); }
+
+.cardHeader { display: flex; justify-content: space-between; margin-bottom: 1rem; }
+
+.docType { font-size: 0.7rem; font-weight: 800; color: #64748b; background: #f1f5f9; padding: 2px 8px; border-radius: 4px; }
+
+.badge { padding: 4px 10px; border-radius: 20px; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; }
+.CLIENTE { background: #dbeafe; color: #1e40af; }
+.PROVEEDOR { background: #fef3c7; color: #92400e; }
+.AMBOS { background: #dcfce7; color: #166534; }
+
+.name { font-size: 1.1rem; color: #1e293b; margin: 0.5rem 0; font-weight: 700; min-height: 2.8rem; }
+.document { color: #10b981; font-weight: 800; font-family: monospace; margin-bottom: 1rem; }
+
+.contactInfo { font-size: 0.8rem; color: #64748b; display: flex; flex-direction: column; gap: 5px; margin-bottom: 1.5rem; }
+
+.cardActions { display: flex; gap: 10px; border-top: 1px solid #f1f5f9; padding-top: 1rem; }
+
+.editBtn, .historyBtn { flex: 1; padding: 8px; border-radius: 8px; font-size: 0.8rem; font-weight: 600; cursor: pointer; }
+
+.editBtn { background: #f8fafc; border: 1px solid #e2e8f0; color: #475569; }
+.historyBtn { background: transparent; border: 1px solid #10b981; color: #10b981; }
+
+@keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; } }

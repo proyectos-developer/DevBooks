@@ -1,0 +1,27 @@
+.layout {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #f8fafc;
+}
+
+.content {
+    flex: 1;
+    padding: 2rem;
+    animation: fadeIn 0.5s ease;
+}
+
+.innerContainer {
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+    .content { padding: 1rem; }
+}

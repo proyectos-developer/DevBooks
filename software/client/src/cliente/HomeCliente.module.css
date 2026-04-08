@@ -1,0 +1,109 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.welcome {
+    margin-bottom: 30px;
+}
+
+.welcome h1 {
+    font-size: 1.8rem;
+    color: #1e293b;
+    margin-bottom: 5px;
+}
+
+.welcome p {
+    color: #64748b;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+}
+
+.card {
+    background: white;
+    border-radius: 16px;
+    border: 1px solid #e2e8f0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.cardHeader {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.icon {
+    font-size: 1.5rem;
+}
+
+.cardHeader h3 {
+    font-size: 1rem;
+    color: #475569;
+    margin: 0;
+}
+
+.cardBody {
+    padding: 20px;
+    flex: 1;
+}
+
+.mainStat {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #2563eb; /* Azul Cliente */
+    margin-bottom: 10px;
+}
+
+.progressLabel {
+    font-size: 0.8rem;
+    color: #94a3b8;
+    margin-top: 15px;
+}
+
+.cardAction {
+    padding: 15px;
+    background: #f8fafc;
+    text-align: center;
+    text-decoration: none;
+    color: #2563eb;
+    font-weight: 600;
+    font-size: 0.9rem;
+    border-top: 1px solid #f1f5f9;
+}
+
+.statusBadge {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 0.8rem;
+    background: #dcfce7;
+    color: #166534;
+    margin-bottom: 15px;
+}
+
+.rucText, .sireStatus {
+    font-size: 0.9rem;
+    color: #64748b;
+    margin: 5px 0;
+}
+
+.loader, .empty {
+    text-align: center;
+    padding: 100px;
+    color: #64748b;
+}

@@ -1,0 +1,148 @@
+.header {
+    height: 70px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e2e8f0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+}
+
+.leftSection {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Botón Hamburguesa */
+.burgerBtn {
+    background: #f1f5f9;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.burgerBtn:hover {
+    background: #e2e8f0;
+}
+
+.burgerLine {
+    width: 20px;
+    height: 2px;
+    background-color: #1e293b;
+    border-radius: 2px;
+}
+
+/* Branding */
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logoCircle {
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    color: white;
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.4);
+}
+
+.brandText .title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin: 0;
+}
+
+.brandText .tagline {
+    font-size: 0.75rem;
+    color: #64748b;
+    display: block;
+}
+
+/* Sección Derecha - Perfil */
+.rightSection {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.userInfo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-right: 1px solid #e2e8f0;
+    padding-right: 20px;
+}
+
+.textDetails {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+}
+
+.userName {
+    font-weight: 600;
+    color: #1e293b;
+    font-size: 0.9rem;
+}
+
+.userCompany {
+    font-size: 0.75rem;
+    color: #3b82f6;
+    font-weight: 500;
+}
+
+.avatar {
+    width: 36px;
+    height: 36px;
+    background: #eff6ff;
+    color: #2563eb;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    border: 2px solid #dbeafe;
+}
+
+.logoutIcon {
+    background: transparent;
+    border: none;
+    color: #94a3b8;
+    cursor: pointer;
+    transition: color 0.2s;
+    padding: 8px;
+    border-radius: 50%;
+}
+
+.logoutIcon:hover {
+    color: #ef4444;
+    background: #fef2f2;
+}
+
+@media (max-width: 600px) {
+    .textDetails { display: none; }
+    .header { padding: 0 16px; }
+}

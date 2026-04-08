@@ -1,0 +1,44 @@
+.container { padding: 2rem; animation: fadeIn 0.4s ease; }
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    padding: 1.5rem 2rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.select {
+    padding: 10px;
+    border-radius: 8px;
+    border: 2px solid #e2e8f0;
+    font-weight: 600;
+}
+
+.accountSection {
+    background: white;
+    border-radius: 12px;
+    margin-bottom: 2.5rem;
+    overflow: hidden;
+    border: 1px solid #edf2f7;
+}
+
+.accountHeader {
+    background: #10b981;
+    color: white;
+    padding: 12px 20px;
+    font-size: 1rem;
+}
+
+.table { width: 100%; border-collapse: collapse; }
+.table th { background: #f8fafc; text-align: left; padding: 12px; font-size: 0.75rem; color: #64748b; }
+.table td { padding: 10px 20px; border-bottom: 1px solid #f1f5f9; font-size: 0.85rem; }
+
+.amount { text-align: right; font-family: monospace; font-weight: 600; }
+
+.loader { padding: 5rem; text-align: center; color: #10b981; font-weight: 700; }
+
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }

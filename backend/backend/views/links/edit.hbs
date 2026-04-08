@@ -1,0 +1,25 @@
+<div class='container p-4'>
+    <div class='form'>
+        <div class='col-md-4 mx-auto'>
+            <div class='card'>
+                <div class='card-body'>
+                    <form action='/links/edit/{{link.id}}' method='POST'>
+                        <div class='form-group mb-3'>
+                            <input tyle='text' value="{{link.title}}" class='form-control' name='title' placeholder='Título' autofocus></input>
+                        </div>
+                        <div class='form-group mb-3'>
+                            <input type='url' value="{{link.url}}" name='url' class='form-control' placeholder='URL'></input>
+                        </div>
+                        <div class='form-group mb-3'>
+                            <textarea  type='text' name='description' placeholder='Descripción' rows='2'
+                                class='form-control'>{{link.description}}</textarea>
+                        </div>
+                        <div class='form-group mb-3'>
+                            <button class="btn btn-success btn-block">Actualizar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

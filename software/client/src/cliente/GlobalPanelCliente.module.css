@@ -1,0 +1,33 @@
+.layout {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f8fafc; /* Slate 50: Fondo muy suave */
+}
+
+.content {
+    flex: 1;
+    padding-top: 70px; /* Altura exacta del Header para que no se traslape */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.innerContainer {
+    width: 100%;
+    max-width: 1400px; /* Evita que en pantallas ultra-anchas se pierda la lectura */
+    padding: 24px;
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Optimización para móviles */
+@media (max-width: 768px) {
+    .innerContainer {
+        padding: 16px;
+    }
+}

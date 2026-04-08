@@ -1,0 +1,264 @@
+.container {
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    animation: fadeIn 0.5s ease;
+}
+
+.formCard {
+    background: white;
+    padding: 3rem;
+    border-radius: 16px;
+    width: 100%;
+    max-width: 700px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+.title {
+    color: #1e3a8a;
+    margin-bottom: 2rem;
+    font-size: 1.6rem;
+    font-weight: 800;
+}
+
+.inputGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.inputGroup label {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #475569;
+}
+
+.inputGroup input, .inputGroup select {
+    padding: 0.85rem;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    font-size: 1rem;
+    transition: all 0.2s;
+}
+
+.inputGroup input:focus {
+    border-color: #3b82f6;
+    outline: none;
+}
+
+.activo { border-left: 6px solid #10b981 !important; }
+
+.actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: 2.5rem;
+}
+
+.saveBtn {
+    background: #1e3a8a;
+    color: white;
+    border: none;
+    padding: 0.85rem 2rem;
+    border-radius: 12px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.saveBtn:disabled { background: #94a3b8; }
+
+/* Estilos del Modal (Iguales a los de Editar) */
+.modalOverlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.7);
+    backdrop-filter: blur(4px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modalContent {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 20px;
+    text-align: center;
+    max-width: 400px;
+}
+
+.successIcon {
+    width: 60px;
+    height: 60px;
+    background: #10b981;
+    color: white;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin: 0 auto 1rem;
+}
+
+/* ... (estilos de container, formCard y inputGroup se mantienen) ... */
+
+.actions {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #f1f5f9;
+}
+
+/* DISEÑO MEJORADO DEL BOTÓN CANCELAR */
+.cancelBtn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0.8rem 1.5rem;
+    background-color: transparent;
+    color: #64748b;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btnIcon {
+    font-size: 1.1rem;
+    transition: transform 0.2s ease;
+}
+
+.cancelBtn:hover {
+    background-color: #f8fafc;
+    color: #1e293b;
+    border-color: #cbd5e1;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.cancelBtn:hover .btnIcon {
+    transform: translateX(-4px); /* Animación de la flecha */
+}
+
+.cancelBtn:active {
+    transform: scale(0.96);
+}
+
+/* Botón Guardar para contraste */
+.saveBtn {
+    background: #1e3a8a;
+    color: white;
+    border: none;
+    padding: 0.85rem 2rem;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(30, 58, 138, 0.2);
+    transition: all 0.2s;
+}
+
+.saveBtn:hover {
+    background: #1e40af;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(30, 58, 138, 0.3);
+}
+
+.saveBtn:disabled {
+    background: #94a3b8;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+/* Select con borde dinámico para estado */
+.activo { border-left: 5px solid #10b981 !important; background-color: #f0fdf4 !important; }
+.habido { border-left: 5px solid #10b981 !important; background-color: #f0fdf4 !important; }
+
+.inputGroup textarea {
+    padding: 0.85rem;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-family: inherit; /* Mantiene la misma fuente del formulario */
+    resize: vertical;     /* Permite al usuario estirarlo solo hacia abajo */
+    transition: all 0.2s;
+}
+
+.inputGroup textarea:focus {
+    border-color: #3b82f6;
+    outline: none;
+    background-color: #fff;
+}
+
+.modalBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    width: 100%;
+    padding: 1rem 1.5rem;
+    background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+    color: white;
+    border: none;
+    border-radius: 14px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 10px 15px -3px rgba(30, 58, 138, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.modalBtnText {
+    position: relative;
+    z-index: 1;
+}
+
+.modalBtnIcon {
+    transition: transform 0.3s ease;
+    position: relative;
+    z-index: 1;
+}
+
+/* Efecto de Brillo al pasar el mouse */
+.modalBtn::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.2),
+        transparent
+    );
+    transition: 0.5s;
+}
+
+.modalBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 20px -5px rgba(30, 58, 138, 0.4);
+    background: linear-gradient(135deg, #1e40af 0%, #1d4ed8 100%);
+}
+
+.modalBtn:hover::after {
+    left: 100%;
+}
+
+.modalBtn:hover .modalBtnIcon {
+    transform: translateX(4px);
+}
+
+.modalBtn:active {
+    transform: scale(0.97);
+    box-shadow: 0 5px 10px -3px rgba(30, 58, 138, 0.3);
+}

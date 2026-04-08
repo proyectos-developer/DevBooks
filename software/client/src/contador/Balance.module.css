@@ -1,0 +1,112 @@
+.container { padding: 2rem; animation: fadeIn 0.5s ease; }
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.exportBtn {
+    background: #065f46;
+    color: white;
+    border: none;
+    padding: 0.7rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.tableCard {
+    background: white;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    overflow-x: auto;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+}
+
+.table th {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    padding: 12px;
+    color: #475569;
+}
+
+.table td {
+    padding: 10px;
+    border: 1px solid #f1f5f9;
+    color: #1e293b;
+}
+
+.centerText { text-align: center; }
+
+.code { font-weight: 800; color: #059669; }
+
+.saldo { background: #fdfdfd; font-weight: 600; text-align: right; }
+
+.loaderContainer {
+    text-align: center;
+    padding: 10rem;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #10b981;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 1rem;
+}
+
+@keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+
+.titleGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.selectorContainer {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.selectorContainer label {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #64748b;
+}
+
+.selectPeriodo {
+    padding: 0.6rem 1rem;
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    color: #1e293b;
+    outline: none;
+    transition: 0.2s;
+}
+
+.selectPeriodo:focus {
+    border-color: #10b981;
+    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+}
+
+.amount {
+    text-align: right;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.noData, .welcomeMessage {
+    padding: 4rem;
+    text-align: center;
+    color: #94a3b8;
+    font-style: italic;
+}

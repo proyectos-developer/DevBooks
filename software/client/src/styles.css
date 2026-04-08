@@ -1,0 +1,94 @@
+:root {
+    --primary-color: #1e3a8a; /* Azul institucional */
+    --secondary-color: #0f172a;
+    --accent-color: #10b981; /* Verde SUNAT/Éxito */
+    --error-color: #ef4444;
+    --bg-light: #f8fafc;
+    --text-dark: #1e293b;
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', -apple-system, sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+}
+
+.loading_screen {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ffffff;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+/* Alertas de Acceso */
+.denied {
+    padding: 2rem;
+    margin: 5rem auto;
+    max-width: 500px;
+    background: #fee2e2;
+    border: 1px solid var(--error-color);
+    border-radius: 8px;
+    text-align: center;
+    color: #991b1b;
+    font-weight: bold;
+}
+
+/* Estilos de Contenedores de Dashboard */
+.dashboard-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 260px;
+    background: var(--secondary-color);
+    color: white;
+    padding: 1.5rem;
+}
+
+.content-area {
+    flex: 1;
+    padding: 2rem;
+    overflow-y: auto;
+}
+
+/* Tablas Contables Estilo Excel */
+.contable-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.contable-table th {
+    background: #f1f5f9;
+    padding: 12px;
+    text-align: left;
+    font-size: 0.85rem;
+    border-bottom: 2px solid #e2e8f0;
+}
+
+.contable-table td {
+    padding: 10px 12px;
+    border-bottom: 1px solid #f1f5f9;
+    font-size: 0.9rem;
+}
+
+/* Botones de Acción */
+.btn-primary {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-primary:hover {
+    background: #1e40af;
+}

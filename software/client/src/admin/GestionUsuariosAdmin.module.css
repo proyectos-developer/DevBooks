@@ -1,0 +1,93 @@
+.container {
+    padding: 1rem;
+    animation: fadeIn 0.4s ease;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.title {
+    color: #1e3a8a;
+    font-size: 1.6rem;
+    font-weight: 800;
+}
+
+.addBtn {
+    background: #1e3a8a;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.tableCard {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    overflow-x: auto;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 800px;
+}
+
+.table th {
+    background: #f8fafc;
+    padding: 1.2rem 1rem;
+    text-align: left;
+    color: #64748b;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+}
+
+.table td {
+    padding: 1.2rem 1rem;
+    border-bottom: 1px solid #f1f5f9;
+    color: #334155;
+    font-size: 0.9rem;
+}
+
+.userName { font-weight: 700; color: #1e293b; }
+.empresaName { color: #3b82f6; font-weight: 500; }
+
+/* BADGES DE ROLES */
+.badge {
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.administrador { background: #fee2e2; color: #b91c1c; }
+.contador { background: #dbeafe; color: #1e40af; }
+.cliente { background: #f1f5f9; color: #475569; }
+
+/* ESTADOS */
+.statusActive { color: #10b981; display: flex; align-items: center; gap: 5px; }
+.statusActive::before { content: '●'; }
+
+.statusInactive { color: #94a3b8; display: flex; align-items: center; gap: 5px; }
+.statusInactive::before { content: '●'; }
+
+.editBtn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: transform 0.2s;
+}
+
+.editBtn:hover { transform: rotate(45deg); }
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(5px); }
+    to { opacity: 1; transform: translateY(0); }
+}

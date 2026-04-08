@@ -1,0 +1,56 @@
+.container { padding: 2rem; animation: fadeIn 0.5s ease; }
+
+.header h2 { color: #1e293b; margin: 0; font-weight: 800; font-size: 1.8rem; }
+.header p { color: #64748b; margin-top: 5px; }
+
+.statsGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.statCard {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 16px;
+    border: 1px solid #f1f5f9;
+}
+
+.statCard label { font-size: 0.75rem; font-weight: 700; color: #94a3b8; text-transform: uppercase; }
+.statCard h3 { margin: 10px 0 0; font-size: 1.5rem; color: #10b981; }
+.expenseText { color: #ef4444 !important; }
+
+.menuGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 1.5rem;
+}
+
+.reportCard {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02);
+}
+
+.reportCard:hover {
+    border-color: #10b981;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 15px -3px rgba(16, 185, 129, 0.1);
+}
+
+.icon { font-size: 2rem; background: #f8fafc; padding: 15px; border-radius: 12px; }
+
+.info h4 { margin: 0; color: #1e293b; font-size: 1.1rem; }
+.info p { margin: 5px 0 0; color: #64748b; font-size: 0.85rem; line-height: 1.4; }
+
+.arrow { margin-left: auto; color: #cbd5e1; font-weight: bold; }
+
+@keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; } }
