@@ -2,12 +2,12 @@
   "expo": {
     "name": "DevBooks",
     "slug": "devbooks-app",
-    "version": "1.0.0",
+    "version": "1.0.2",
     "orientation": "portrait",
-    "icon": "./assets/DevBooks512.png",
+    "icon": "./assets/icono-devbooks512.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/DevBooks512.png",
+      "image": "./assets/icono-devbooks512.png",
       "resizeMode": "contain",
       "backgroundColor": "#0f172a"
     },
@@ -20,18 +20,18 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/DevBooks512.png",
+        "foregroundImage": "./assets/icono-devbooks512.png",
         "backgroundColor": "#0f172a"
       },
       "package": "com.developerideas.devbooks",
       "versionCode": 1
     },
     "web": {
-      "favicon": "./assets/DevBooks512.png"
+      "favicon": "./assets/icono-devbooks512.png"
     },
     "extra": {
       "eas": {
-        "projectId": "a3b93c42-5f01-4306-84ac-f782bad34574"
+        "projectId": "51545fd0-a6fa-4816-bc06-b0b937711440"
       }
     }
   }

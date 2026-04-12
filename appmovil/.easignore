@@ -1,0 +1,12 @@
+# Ignorar todo lo que esté fuera
+../
+../../
+
+# Ignorar carpetas pesadas
+node_modules/
+.expo/
+android/
+ios/
+
+# Ignorar explícitamente el backend por si acaso
+backend/
