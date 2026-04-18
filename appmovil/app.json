@@ -4,12 +4,12 @@
     "slug": "devbooks-app",
     "version": "1.0.2",
     "orientation": "portrait",
-    "icon": "./assets/icono-devbooks512.png",
+    "icon": "./assets/adaptive-icon-devbooks.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/icono-devbooks512.png",
+      "image": "./assets/adaptive-icon-devbooks.png",
       "resizeMode": "contain",
-      "backgroundColor": "#0f172a"
+      "backgroundColor": "#34454F"
     },
     "assetBundlePatterns": [
       "**/*"
@@ -20,14 +20,14 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/icono-devbooks512.png",
-        "backgroundColor": "#0f172a"
+        "foregroundImage": "./assets/adaptive-icon-devbooks.png",
+        "backgroundColor": "#34454F"
       },
       "package": "com.developerideas.devbooks",
       "versionCode": 1
     },
     "web": {
-      "favicon": "./assets/icono-devbooks512.png"
+      "favicon": "./assets/adaptive-icon-devbooks.png"
     },
     "extra": {
       "eas": {
